@@ -9,18 +9,24 @@
 <p dir="rtl" style="font-size:18px">منح الأدوار و الصلاحيات للمستخدمين.</p>
 <p dir="rtl" style="font-size:18px">توجيه المستخدمين حسب الأدوار والصلاحيات.</p>
 <p dir="rtl" style="font-size:22px;font-weight:bold;">قبل البدء:</p>
+
 ```bash
+
 git clone https://github.com/Ensaia/laravel-laratrust.git
 cd laravel-laratrust
 composer install
 cp .env.example .env
 php artisan key:generate
 php artisan migrate --seed
+
 ```
 <p dir="rtl" style="font-size:22px;font-weight:bold;">ابدأ خادم التطوير:</p>
+
 ```bash
+
 # Terminal
 php artisan serve
+
 ```
 
 
