@@ -1,0 +1,21 @@
+.dg-btn--ok {
+    border-color: green;
+}
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+    /* Default position in LTR is right. In RTL, it might be left. */
+    /* To explicitly set a custom position (e.g., left in LTR, or right in RTL): */
+    background-position: left calc(0.375em + 0.1875rem) center; /* Example for left position */
+    padding-right: 0.75rem; /* Adjust padding as needed for LTR/RTL */
+    padding-left: calc(1.5em + 0.75rem); /* Add necessary padding for the icon space */
+}
+
+/* Fonts */
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+/* DataTables */
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+@import "datatables.net-bs5/css/dataTables.bootstrap5.min.css";
+@import "datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css";
+@import 'datatables.net-select-bs5/css/select.bootstrap5.css';
