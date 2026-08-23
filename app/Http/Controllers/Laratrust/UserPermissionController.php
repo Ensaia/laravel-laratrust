@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Laratrust;
 
 use App\Models\Permission;
 use App\Models\Role;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\User;
@@ -48,13 +49,19 @@ class UserPermissionController extends Controller
             return redirect()->route('userPermissionCreate', $user->id)
                 ->withErrors($validator)->withInput();
         } else {
-            $user->permissions()->attach([
-                $request->permission_id
-            ]);
-            if ($user) {
-                return redirect()->route('userPermissionCreate', $user->id)->with('success', Config::get('constants.message.INSERT_SUCCESS'));
-            } else {
-                return redirect()->route('userPermissionCreate', $user->id)->with('error', Config::get('constants.message.INSERT_ERROR'));
+            try {
+                $user->permissions()->attach([
+                    $request->permission_id
+                ]);
+                if ($user) {
+                    return redirect()->route('userPermissionCreate', $user->id)->with('success', Config::get('constants.message.INSERT_SUCCESS'));
+                } else {
+                    return redirect()->route('userPermissionCreate', $user->id)->with('error', Config::get('constants.message.INSERT_ERROR'));
+                }
+            }catch (QueryException $error){
+                if($error->errorInfo[1] == 19){
+                    return redirect()->route('userPermissionCreate', $user->id)->withErrors(['error' => Config::get('constants.message.INSERT_ERROR')]);
+                }
             }
         }
 

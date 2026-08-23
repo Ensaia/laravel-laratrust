@@ -1,7 +1,39 @@
 <x-layouts.dashboard>
-    <!-- Profile 1 - Bootstrap Brain Component -->
-    <x-ui.success></x-ui.success>
-    <x-ui.errors></x-ui.errors>
+    <div class="row mt-3">
+        <div class="col-md-12">
+            @if(session('status'))
+                <div class="alert alert-success alert-dismissible fade show de-flex" role="alert">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    <div class="d-flex justify-content-between">
+                        <div class="fs-6 fw-semibold">
+                            @switch(session('status'))
+                                @case(\Laravel\Fortify\Fortify::PROFILE_INFORMATION_UPDATED)
+                                تم تحديث معلومات ملفك الشخصي.
+                                @break
+                                @case(\Laravel\Fortify\Fortify::PASSWORD_UPDATED)
+                                تم تحديث كلمة مرورك.
+                                @break
+                                @default
+                                {{ session('status') }}
+                            @endswitch
+                        </div>
+                        <div><i class="fa-solid fa-circle-check fa-lg"></i></div>
+                    </div>
+                </div>
+            @endif
+        </div>
+    </div>
+    <div>
+        @if ($errors->updatePassword->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->updatePassword->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+    </div>
     <section class="py-2 py-md-2 py-xl-1">
             <div class="row gy-4 gy-lg-0">
                 <div class="col-12 col-lg-4 col-xl-3">
@@ -56,8 +88,8 @@
                     {{-- update profile info --}}
                     <div class="card widget-card border-light shadow-sm">
                         <div class="card-header">{{ __('تحديث البيانات') }}</div>
-{{--                        <form action="{{ route('user-profile-information.update') }}" method="post">--}}
-                        <form action="{{ route('updateProfileInformation') }}" method="post">
+                        <form action="{{ route('user-profile-information.update') }}" method="post">
+{{--                        <form action="{{ route('updateProfileInformation') }}" method="post">--}}
                             @csrf
                             @method('put')
                             <div class="card-body p-4 row g-3">
@@ -86,7 +118,8 @@
                     {{-- update user password --}}
                     <div class="card widget-card border-light shadow-sm mt-3">
                         <div class="card-header">{{ __('تحديث كلمة المرور') }}</div>
-                        <form action="{{ route('updateUserPassword') }}" method="post">
+{{--                        <form action="{{ route('updateUserPassword') }}" method="post">--}}
+                            <form action="{{ route('user-password.update') }}" method="post">
                             @csrf
                             @method('put')
                             <div class="card-body p-4 row g-3">

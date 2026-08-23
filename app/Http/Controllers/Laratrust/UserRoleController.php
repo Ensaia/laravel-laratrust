@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Laratrust;
 
 use App\Models\Role;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\User;
@@ -51,13 +52,19 @@ class UserRoleController extends Controller
             return redirect()->route('userRoleCreate', $user->id)
                 ->withErrors($validator)->withInput();
         } else {
-            $user->roles()->attach([
-                $request->role_id
-            ]);
-            if ($user) {
-                return redirect()->route('userRoleCreate', $user->id)->with('success', Config::get('constants.message.INSERT_SUCCESS'));
-            } else {
-                return redirect()->route('userRoleCreate', $user->id)->with('error', Config::get('constants.message.INSERT_ERROR'));
+            try {
+                $user->roles()->attach([
+                    $request->role_id
+                ]);
+                if ($user) {
+                    return redirect()->route('userRoleCreate', $user->id)->with('success', Config::get('constants.message.INSERT_SUCCESS'));
+                } else {
+                    return redirect()->route('userRoleCreate', $user->id)->with('error', Config::get('constants.message.INSERT_ERROR'));
+                }
+            }catch (QueryException $error){
+                if($error->errorInfo[1] == 19){
+                    return redirect()->route('userRoleCreate', $user->id)->withErrors(['error' => Config::get('constants.message.INSERT_ERROR')]);
+                }
             }
         }
     }

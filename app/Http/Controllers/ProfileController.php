@@ -79,7 +79,12 @@ class ProfileController extends Controller
         $user->update([
             'password' => Hash::make($request->password),
         ]);
+        if ($user->hasRole('user')) {
+            return redirect()->route('homeUserProfile')->with('success', Config::get('constants.message.UPDATE_SUCCESS'));
+        } else {
+            return redirect()->route('userProfile')->with('success', Config::get('constants.message.UPDATE_SUCCESS'));
 
-        return redirect()->route('userProfile')->with('success', Config::get('constants.message.UPDATE_SUCCESS'));
+        }
+
     }
 }

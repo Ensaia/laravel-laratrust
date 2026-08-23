@@ -25,6 +25,12 @@
             >
                 <li class="nav-header">{{ __('القائمة الرئيسية') }}</li>
                 <li class="nav-item">
+                    <a class="nav-link d-flex justify-content-between" aria-current="page" href="{{ route('homeIndex') }}">
+                        <span>{{ __('الرئيسية') }}</span>
+                        <span><i class="fa-solid fa-home"></i></span>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link d-flex justify-content-between" href="{{ route('dashboard') }}">
                         <span>{{ __('لوحة التحكم') }}</span>
                         <span><i class="fa-solid fa-gauge-high"></i></span>

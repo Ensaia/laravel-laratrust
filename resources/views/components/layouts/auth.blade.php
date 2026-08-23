@@ -8,7 +8,8 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Astro v5.13.2">
-    <title>Starter Template · Bootstrap v5.3</title>
+    <title>{{ config('app.name', 'Laravel') }}</title>
+    <link rel="shortcut icon" href="{{ asset('favicon/favicon.ico') }}" type="image/x-icon" sizes="32x32"/>
     <meta name="theme-color" content="#712cf9">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.rtl.min.css') }}">
     <style>

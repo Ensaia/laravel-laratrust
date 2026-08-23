@@ -8,6 +8,12 @@
                     <i class="fa-solid fa-bars"></i>
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="{{ route('homeIndex') }}">
+                    <span>{{ __('الرئيسية') }}</span>
+                    <span><i class="fa-solid fa-home"></i></span>
+                </a>
+            </li>
             <li class="nav-item d-none d-md-block">
                 <a href="{{ route('dashboard') }}" class="nav-link">
                     <span>{{ __('لوحة التحكم') }}</span>

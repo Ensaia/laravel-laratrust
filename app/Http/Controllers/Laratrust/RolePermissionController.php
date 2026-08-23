@@ -8,7 +8,7 @@ use App\Models\Role;
 use App\Models\Permission;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Validator;
-
+use Illuminate\Database\QueryException;
 
 class RolePermissionController extends Controller
 {
@@ -53,14 +53,20 @@ class RolePermissionController extends Controller
             return redirect()->route('rolePermissionCreate',$role->id)
                 ->withErrors($validator)->withInput();
         } else {
-            $role->permissions()->attach([
-                $request->permission_id
-            ]);
-            if ($role) {
-                return redirect()->route('rolePermissionCreate',$role->id)->with('success' , Config::get('constants.message.UPDATE_SUCCESS'));
-            } else {
-                return redirect()->route('rolePermissionCreate',$role->id)->with('error' , Config::get('constants.message.UPDATE_ERROR'));
+          try{
+              $role->permissions()->attach([
+                  $request->permission_id
+              ]);
+              if ($role) {
+                  return redirect()->route('rolePermissionCreate',$role->id)->with('success' , Config::get('constants.message.INSERT_SUCCESS'));
+              } else {
+                  return redirect()->route('rolePermissionCreate',$role->id)->with('error' , Config::get('constants.message.INSERT_ERROR'));
+              }
+          }catch (QueryException $error){
+            if($error->errorInfo[1] === 19){
+                return redirect()->route('rolePermissionCreate',$role->id)->withErrors(['error' => Config::get('constants.message.INSERT_ERROR')]);
             }
+          }
         }
     }
     /**
