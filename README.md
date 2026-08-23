@@ -31,7 +31,6 @@ php artisan serve
 
 <p dir="rtl" style="font-size:22px;font-weight:bold;">افتح الرابط <a href="http://localhost:8000" target="_blank">http://localhost:8000</a> وسجّل الدخول باستخدام:</p>
 
-<p dir="rtl" style="font-size:22px;font-weight:bold;">المستخدومون:</p>
 <p dir="ltr"><span style="font-size:16px;font-weight:bold;">Email</span> : mohammed@laravel.com</p>
 <p dir="ltr"><span style="font-size:16px;font-weight:bold;">Password</span> : password</p>
 ------------
