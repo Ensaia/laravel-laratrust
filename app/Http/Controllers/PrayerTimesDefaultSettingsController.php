@@ -37,11 +37,11 @@ class PrayerTimesDefaultSettingsController extends Controller
     {
         $rules = [
             'city_id' => 'required',
-            'hijri_correction' => 'required',
+            //'hijri_correction' => 'required',
         ];
         $messages = [
             'city_id.required' => 'يرجى اختيار مدينة من القائمة',
-            'hijri_correction.required' => 'حقل تصحيح التاريخ الهجري إجباري و لا يمكن تركة خاليا',
+            //'hijri_correction.required' => 'حقل تصحيح التاريخ الهجري إجباري و لا يمكن تركة خاليا',
         ];
         $validator = Validator::make($request->all(),$rules,$messages);
         if($validator->fails()){
@@ -52,7 +52,7 @@ class PrayerTimesDefaultSettingsController extends Controller
             ->where('default_id', 1)
             ->update(
                 ['city_id' => $request->input('city_id')],
-                ['hijri_correction' => $request->input('hijri_correction')]
+                //['hijri_correction' => $request->input('hijri_correction')]
             );
             if($update_default_setting){
                 return redirect()->route('prayerTimeDefaultSettingsIndex')->with('success', Config::get('constants.message.UPDATE_SUCCESS'));

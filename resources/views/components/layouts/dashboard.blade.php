@@ -32,7 +32,22 @@
 
         <!--BREADCRUMB-->
         <div class="app-content">
-            <div class="container-fluid py-5">
+            <div class="container-fluid py-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div>
+                            <span class="fw-semibold fs-6" id="hijri-date-span"></span>
+                            @php
+                                $hijri_correction_object = \Illuminate\Support\Facades\DB::connection('prayer_times')
+                                ->table('default_setting')
+                                ->first('hijri_correction');
+                            @endphp
+                            <span class="" data-hijri-correction="{{ $hijri_correction_object->hijri_correction }}"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid py-3">
                 {{ $slot }}
             </div>
         </div>
@@ -48,6 +63,7 @@
 <script type="application/javascript" src="{{ asset('js/sweetalert2.all.min.js') }}"></script>
 <script type="application/javascript" src="{{ asset('js/chart.js') }}"></script>
 <script type="application/javascript" src="{{ asset('js/dashboard-script.js') }}"></script>
+<script type="application/javascript" src="{{ asset('js/hijri-date.js') }}"></script>
 <script>
     const SELECTOR_SIDEBAR_WRAPPER = '.sidebar-wrapper';
     const Default = {

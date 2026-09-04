@@ -29,6 +29,18 @@ Route::middleware(['auth', 'with.privileges', 'verified'])->group(function () {
      */
     Route::middleware(['role:admin'])->group(function () {
         /*
+         * Actions log
+         */
+        Route::controller(\App\Http\Controllers\ActionLogController::class)->group(function () {
+            Route::get('/dashboard/action-log', 'index')->name('actionLogIndex');
+        });
+        /*
+         * Login log
+         */
+        Route::controller(\App\Http\Controllers\LoginLogController::class)->group(function () {
+            Route::get('/dashboard/login-log', 'index')->name('loginLogIndex');
+        });
+        /*
     * USER
     */
         Route::controller(\App\Http\Controllers\UserController::class)->group(function () {

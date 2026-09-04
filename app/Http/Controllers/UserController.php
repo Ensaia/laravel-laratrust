@@ -15,7 +15,7 @@ class UserController extends Controller
      * Display a listing of the resource.
      */
     public function index(User $user){
-        $users = User::with(['roles','permissions'])->paginate(20);
+        $users = User::with(['roles','permissions'])->paginate(2);
         return view('dashboard.user.index',['users' => $users]);
     }
     /**

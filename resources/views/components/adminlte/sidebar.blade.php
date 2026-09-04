@@ -41,6 +41,18 @@
                         <span><i class="fa-solid fa-users"></i></span>
                     </a>
                 </li>
+                </li>  <li class="nav-item">
+                    <a class="nav-link d-flex justify-content-between" href="{{ route('loginLogIndex') }}">
+                        <span>{{ __('سجل الدخول') }}</span>
+                        <span><i class="fa-solid fa-address-book"></i></span>
+                    </a>
+                </li>
+                </li>  <li class="nav-item">
+                    <a class="nav-link d-flex justify-content-between" href="{{ route('actionLogIndex') }}">
+                        <span>{{ __('سجل العمليات') }}</span>
+                        <span><i class="fa-solid fa-address-book"></i></span>
+                    </a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link d-flex justify-content-between" href="{{ route('rolesIndex') }}">
                         <span>{{ __('الأدوار') }}</span>

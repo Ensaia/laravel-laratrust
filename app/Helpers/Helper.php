@@ -3,6 +3,7 @@
 
 namespace App\Helpers;
 
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use App\Models\UserAction;
 
@@ -19,5 +20,12 @@ class Helper
                 // You might also log specific changes here
             ]);
         }
+    }
+
+    public static function getUsername(string $id){
+        return User::Where('id','=',$id)->value('name');
+    }
+    public static function getUserEmail(string $id){
+        return User::Where('id','=',$id)->value('email');
     }
 }
