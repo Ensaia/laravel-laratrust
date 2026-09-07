@@ -23,7 +23,6 @@ class DefaultSettingTableSeeder extends Seeder
             array (
                 'default_id' => 1,
                 'city_id' => 16,
-                'hijri_correction' => 0,
                 'created_at' => '2026-02-16 21:39:52',
                 'updated_at' => '2026-02-16 21:39:52',
             ),

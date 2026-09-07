@@ -11,8 +11,9 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
     <link rel="shortcut icon" href="{{ asset('favicon/favicon.ico') }}" type="image/x-icon" sizes="32x32"/>
     <meta name="theme-color" content="#712cf9">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.rtl.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/4.9.1/css/adminlte.rtl.css" integrity="sha512-aLbnHw0O2W496in4VMIQNLESZTznUAqIvXK+sGYp524zRQcfs+ooipFL6oYW+/JGupUrt2LlWgUw3lRLzM3a4A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/14.2.0/swiper-bundle.css" integrity="sha512-lZuYn1nIUGLk0a1UigT2YvdY3gux5InRGr/CUJCceLe/SP0he7OVcqxL6wH0UgCpzq49LSb2cT2xc6gOqok7mA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.8.4/plyr.css" integrity="sha512-q0F6PlrMogvCMWJMi0XRoKD8yDTNtVadIvPd9Nw8kGJKOk84yhAJFyrSgbNn0QX8ntZNnnQoE5W5pIZTdoiU1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body>
@@ -21,12 +22,6 @@
         <div class="col-md-12">
             <div>
                 <span class="fw-semibold fs-6" id="hijri-date-span"></span>
-                @php
-                    $hijri_correction_object = \Illuminate\Support\Facades\DB::connection('prayer_times')
-                    ->table('default_setting')
-                    ->first('hijri_correction');
-                @endphp
-                <span class="" data-hijri-correction="{{ $hijri_correction_object->hijri_correction }}"></span>
             </div>
         </div>
     </div>
@@ -158,9 +153,11 @@
         </div>
     </div>
 </div>
-<script type="application/javascript" src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-<script type="application/javascript" src="{{ asset('js/swiper-bundle.min.js') }}"></script>
-<script type="application/javascript" src="{{ asset('js/fontawesome.all.min.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/4.9.1/js/adminlte.js" integrity="sha512-0kI5hsA2SWCV8XY0KeaJ66ErIEXUwmMP4vqkfcd7Tr/K7OREeQ/5PN65z5r+Z5wDeV8Zt2LqVoOd75K4EAH48A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/js/all.js" integrity="sha512-YbiNgTNv2GVfwJwqGr9Xv9xWzPIEwaDOv3f2S6HFbRVeo/xuM87nKqkmBPctPP3sbvxv3EpNIRss+3gjEJbVrA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/14.2.0/swiper-bundle.js" integrity="sha512-VN5TzqxJ3XnK1HHjCz9FUlCvVoI7gB8M3wo7Cso5P+JnwuLIM5FOh1LU8FSZ+QobLmI9895yD2rFGIs/1c35Tg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.8.4/plyr.js" integrity="sha512-sKws1u9CpOE8ouFHr3g4k5/RUYzUQBrEV7gQepdU1fpe7oSaI7B5IIT/GhxUyjYQgD4XiDM/408v8YfnN1YlEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.8.4/plyr.polyfilled.js" integrity="sha512-+glTdCHzzRAN6KgG6qE7BE+SMMAz2FXVIOtczUKyNUNcRjqzxxtyNmtNz5tZiwOGGxAsBuZkakKf3qdqZ3yzpw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="application/javascript" src="{{ asset('js/back-to-top.js') }}"></script>
 <script type="application/javascript" src="{{ asset('js/app-script.js') }}"></script>
 <script type="application/javascript" src="{{ asset('js/hijri-date.js') }}"></script>

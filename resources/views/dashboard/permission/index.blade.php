@@ -1,6 +1,6 @@
 <x-layouts.dashboard>
     <x-ui.success></x-ui.success>
-    <div class="row">
+    <div class="row mt-3">
         <div class="cold-md-12">
             <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
                 <ol class="breadcrumb">

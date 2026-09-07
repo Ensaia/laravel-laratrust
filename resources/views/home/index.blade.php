@@ -31,6 +31,7 @@
             </div>
         </div>
         <div class="col-md-6">
+            <!-- prayer times -->
             <div class="card mt-2 g-3">
                 <div class="card-body">
                     <div class="card-title">
@@ -63,6 +64,7 @@
 
                 </div>
             </div>
+            <!-- latest posts -->
             <div class="mt-3">
                 <span class="fw-semibold">{{ __('جديد المنشورات') }}</span>
             </div>
@@ -73,6 +75,16 @@
                     </div>
                 </div>
             @endforeach
+            <!-- ply youtube -->
+            <div class="mt-3">
+                <div id="plyr-youtube-player" data-plyr-provider="youtube" data-plyr-embed-id="h6SB5DRN-CM"></div>
+            </div>
         </div>
     </div>
+    <script> 
+    document.addEventListener("DOMContentLoaded", (event) => {
+  const plyrYoutubePlayer = Plyr.setup('#plyr-youtube-player')
+  plyrYoutubePlayer.play();
+});
+</script>
 </x-layouts.app>

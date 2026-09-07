@@ -18,6 +18,13 @@ class PermissionRoleTableSeeder extends Seeder
 
         \DB::table('permission_role')->delete();
         
+        \DB::table('permission_role')->insert(array (
+            0 => 
+            array (
+                'permission_id' => 2,
+                'role_id' => 11,
+            ),
+        ));
         
         
     }

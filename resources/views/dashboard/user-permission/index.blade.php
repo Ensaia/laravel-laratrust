@@ -1,9 +1,36 @@
 <x-layouts.dashboard>
     <x-ui.success></x-ui.success>
+          <div class="row mt-3">
+        <div class="cold-md-12">
+            <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="{{ route('dashboard') }}">
+                            <span>{{ __('الرئيسية') }}</span>
+                            <span><i class="fa-solid fa-gauge-high"></i></span>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="{{ route('usersIndex') }}">
+                            <span>{{ __('المستخدمون') }}</span>
+                            <span><i class="fa-solid fa-users"></i></span>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="{{ route('userPermissionsIndex',request()->user->id) }}">
+                            <span>{{ __('صلاحيات المستخدم') }}</span>
+                            <span><i class="fa-solid fa-user-lock"></i></span>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item" aria-current="page"></li>
+                </ol>
+            </nav>
+        </div>
+    </div>
         <div class="row mt-3">
             <div class="col-md-12">
                 <a href="{{ route('userPermissionCreate',request()->user) }}" class="btn btn-dark">
-                    <span class="p-2">{{ __('إضافة إذن') }}</span>
+                    <span class="p-2">{{ __('إضافة صلاحيات') }}</span>
                     <span><i class="fa-solid fa-plus-square"></i></span>
                 </a>
             </div>
@@ -17,7 +44,7 @@
                         <tr>
                             <th>{{ __('#') }}</th>
                             <th>{{ __('اسم المستخدم') }}</th>
-                            <th>{{ __('الأذونات') }}</th>
+                            <th>{{ __('الصلاحيات') }}</th>
                             <th>{{ __('العمليات') }}</th>
                         </tr>
                         </thead>

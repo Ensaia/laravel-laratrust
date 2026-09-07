@@ -1,5 +1,32 @@
 <x-layouts.dashboard>
     <x-ui.success></x-ui.success>
+        <div class="row mt-3">
+        <div class="cold-md-12">
+            <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="{{ route('dashboard') }}">
+                            <span>{{ __('الرئيسية') }}</span>
+                            <span><i class="fa-solid fa-gauge-high"></i></span>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="{{ route('permissionsIndex') }}">
+                            <span>{{ __('الصلاحيات') }}</span>
+                            <span><i class="fa-solid fa-user-lock"></i></span>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="{{ route('permissionCreate') }}">
+                             <span>{{ __('إضافة صلاحيات') }}</span>
+                    <span><i class="fa-solid fa-square-plus"></i></span>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item" aria-current="page"></li>
+                </ol>
+            </nav>
+        </div>
+    </div>
 <div class="row mt-3">
   <div class="col-md-12">
         <div class="card">

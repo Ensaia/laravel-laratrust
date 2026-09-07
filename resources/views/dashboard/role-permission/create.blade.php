@@ -1,6 +1,39 @@
 <x-layouts.dashboard>
     <x-ui.errors></x-ui.errors>
     <x-ui.success></x-ui.success>
+     <div class="row mt-3">
+        <div class="cold-md-12">
+            <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="{{ route('dashboard') }}">
+                            <span>{{ __('الرئيسية') }}</span>
+                            <span><i class="fa-solid fa-gauge-high"></i></span>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="{{ route('rolesIndex') }}">
+                            <span>{{ __('الأدوار') }}</span>
+                            <span><i class="fa-solid fa-user-gear"></i></span>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="{{ route('rolePermissionsIndex',request()->role->id) }}">
+                            <span>{{ __('صلاحيات الدور') }}</span>
+                            <span><i class="fa-solid fa-user-gear"></i></span>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="{{ route('rolePermissionCreate',request()->role->id) }}">
+                            <span>{{ __('إضافة صلاحيات لدور') }}</span>
+                            <span><i class="fa-solid fa-plus-square"></i></span>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item" aria-current="page"></li>
+                </ol>
+            </nav>
+        </div>
+    </div>
     <div class="row mt-3">
         <div class="col-md-12">
             <form method="post" action="{{ route('rolePermissionStore',request()->role) }}" class="g-3">

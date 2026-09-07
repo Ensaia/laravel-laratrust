@@ -20,14 +20,9 @@ class PrayerTimesDefaultSettingsController extends Controller
             ->select('city_name')
             ->where('city_id','=',$city_id_object->city_id)
             ->first();
-        $hijri_correction_object = DB::connection('prayer_times')
-            ->table('default_setting')
-            ->select('hijri_correction')
-            ->first();
         $data['cities'] = DB::connection('prayer_times')->table('city')->get();
         $data['city_name'] = $city_name_object->city_name;
         $data['city_id'] = $city_id_object->city_id;
-        $data['hijri_correction'] = $hijri_correction_object->hijri_correction;
         return view('dashboard.prayer-times-default.index',$data);
     }
     /**
@@ -37,11 +32,9 @@ class PrayerTimesDefaultSettingsController extends Controller
     {
         $rules = [
             'city_id' => 'required',
-            //'hijri_correction' => 'required',
         ];
         $messages = [
             'city_id.required' => 'يرجى اختيار مدينة من القائمة',
-            //'hijri_correction.required' => 'حقل تصحيح التاريخ الهجري إجباري و لا يمكن تركة خاليا',
         ];
         $validator = Validator::make($request->all(),$rules,$messages);
         if($validator->fails()){
@@ -51,8 +44,7 @@ class PrayerTimesDefaultSettingsController extends Controller
             ->table('default_setting')
             ->where('default_id', 1)
             ->update(
-                ['city_id' => $request->input('city_id')],
-                //['hijri_correction' => $request->input('hijri_correction')]
+                ['city_id' => $request->input('city_id')]
             );
             if($update_default_setting){
                 return redirect()->route('prayerTimeDefaultSettingsIndex')->with('success', Config::get('constants.message.UPDATE_SUCCESS'));

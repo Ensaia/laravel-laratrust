@@ -47,13 +47,6 @@
                             <div class="invalid-feedback form-text fw-semibold fs-6">{{ $message }}</div>
                             @enderror
                         </div>
-{{--                        <div class="">--}}
-{{--                            <label for="content" class="form-label">{{ __('تصحيح التاريخ الهجري') }}</label>--}}
-{{--                            <input type="number" name="hijri_correction" id="hijri-correction" class="form-control  @error ('hijri_correction') is-invalid @enderror" placeholder="{{ __('تصحيح التاريخ الهجري') }}"  value="{{ $hijri_correction  }}"/>--}}
-{{--                            @error('hijri_correction')--}}
-{{--                            <div class="invalid-feedback form-text fw-semibold fs-6">{{ $message }}</div>--}}
-{{--                            @enderror--}}
-{{--                        </div>--}}
                     </div>
                     <div class="card-footer">
                         <div class="">

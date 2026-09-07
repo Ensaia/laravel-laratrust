@@ -1,6 +1,33 @@
 <x-layouts.dashboard>
     <x-ui.errors></x-ui.errors>
     <x-ui.success></x-ui.success>
+      <div class="row mt-3">
+        <div class="cold-md-12">
+            <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="{{ route('dashboard') }}">
+                            <span>{{ __('الرئيسية') }}</span>
+                            <span><i class="fa-solid fa-gauge-high"></i></span>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="{{ route('usersIndex') }}">
+                            <span>{{ __('المستخدمون') }}</span>
+                            <span><i class="fa-solid fa-users"></i></span>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="{{ route('userEdit',request()->user->id) }}">
+                            <span>{{ __('تحديث بيانات مستخدم') }}</span>
+                            <span><i class="fa-solid fa-pen-to-square"></i></span>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item" aria-current="page"></li>
+                </ol>
+            </nav>
+        </div>
+    </div>
     <div class="row mt-3">
         <div class="col-md-12">
             <form action="{{ route('userUpdate',request()->user) }}" method="post">

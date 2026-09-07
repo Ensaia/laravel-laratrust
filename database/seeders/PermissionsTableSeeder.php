@@ -22,20 +22,29 @@ class PermissionsTableSeeder extends Seeder
             0 => 
             array (
                 'id' => 1,
-                'name' => 'edit-user',
-                'display_name' => 'تعديل بيانات مستخدم',
-                'description' => 'يسمح لهذا المستخدم بتعديل بيانات المستخدمين',
-                'created_at' => '2026-02-06 17:24:06',
-                'updated_at' => '2026-03-30 15:57:31',
+                'name' => 'create-post',
+                'display_name' => 'إضافة منشور',
+                'description' => 'يسمح لصاحب هذا الحساب بإضافة منشور',
+                'created_at' => '2026-08-04 11:11:08',
+                'updated_at' => '2026-08-04 11:13:55',
             ),
             1 => 
             array (
                 'id' => 2,
-                'name' => 'create-post',
-                'display_name' => 'Create Posts',
-                'description' => 'create new blog posts',
-                'created_at' => '2026-02-06 19:51:24',
-                'updated_at' => '2026-02-06 19:51:24',
+                'name' => 'edit-post',
+                'display_name' => 'تحديث بيانات منشور',
+                'description' => 'يسمح لصاحب هذا الحساب بتحديث بيانات منشور',
+                'created_at' => '2026-08-04 11:15:19',
+                'updated_at' => '2026-08-04 11:15:19',
+            ),
+            2 => 
+            array (
+                'id' => 3,
+                'name' => 'delete-post',
+                'display_name' => 'حذف بيانات منشور',
+                'description' => 'يسمح لصاحب هذا الحساب بحذف بيانات منشور',
+                'created_at' => '2026-08-04 11:16:07',
+                'updated_at' => '2026-08-04 11:16:07',
             ),
         ));
         

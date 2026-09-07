@@ -11,7 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
     <link rel="shortcut icon" href="{{ asset('favicon/favicon.ico') }}" type="image/x-icon" sizes="32x32"/>
     <meta name="theme-color" content="#712cf9">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.rtl.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/4.9.1/css/adminlte.rtl.css" integrity="sha512-aLbnHw0O2W496in4VMIQNLESZTznUAqIvXK+sGYp524zRQcfs+ooipFL6oYW+/JGupUrt2LlWgUw3lRLzM3a4A==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <style>
         .login,
 .image {
@@ -43,7 +43,7 @@
             </div>
         </div>
     </main>
-    <script type="application/javascript" src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-    <script type="application/javascript" src="{{ asset('js/fontawesome.all.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/4.9.1/js/adminlte.js" integrity="sha512-0kI5hsA2SWCV8XY0KeaJ66ErIEXUwmMP4vqkfcd7Tr/K7OREeQ/5PN65z5r+Z5wDeV8Zt2LqVoOd75K4EAH48A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/js/all.js" integrity="sha512-YbiNgTNv2GVfwJwqGr9Xv9xWzPIEwaDOv3f2S6HFbRVeo/xuM87nKqkmBPctPP3sbvxv3EpNIRss+3gjEJbVrA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
