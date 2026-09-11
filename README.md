@@ -8,25 +8,48 @@
 <p dir="rtl" style="font-size:18px">منح الصلاحيات للأدوار.</p>
 <p dir="rtl" style="font-size:18px">منح الأدوار و الصلاحيات للمستخدمين.</p>
 <p dir="rtl" style="font-size:18px">توجيه المستخدمين حسب الأدوار والصلاحيات.</p>
+
+<p dir="rtl" style="font-size:22px;font-weight:bold;"> يحتوي التطبيق على قاعدتين للبيانات الأولى للتطبيق والثانية لمواقيت الصلوات في حالة عدم الحاجة لمواقيت الصلوات يمكن إلغاء الإتصال</p>
+
+```bash
+config/database.php prayer_times
+```
+
 <p dir="rtl" style="font-size:22px;font-weight:bold;">قبل البدء:</p>
 
 ```bash
-
+# Terminal
 git clone https://github.com/Ensaia/laravel-laratrust.git
 cd laravel-laratrust
 composer install
 cp .env.example .env
 php artisan key:generate
-php artisan migrate --database=prayer_times --seed 
-php artisan db:seed --database=prayer_times
+touch database/prayer_times.sqlite 
+php artisan migrate 
+php artisan db:seed 
+php artisan db:seed --class=PrayerTimesSeeder
 
 ```
+
 <p dir="rtl" style="font-size:22px;font-weight:bold;">ابدأ خادم التطوير:</p>
+
 
 ```bash
 
 # Terminal
 php artisan serve
+
+```
+
+<p dir="rtl" style="font-size:22px;font-weight:bold;">mailCatcher إعدادات البريد الإلكتروني</p>
+
+```bash
+
+# .env
+MAIL_MAILER=smtp
+MAIL_SCHEME=null
+MAIL_HOST=127.0.0.1
+MAIL_PORT=1025
 
 ```
 

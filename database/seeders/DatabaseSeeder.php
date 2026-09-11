@@ -21,9 +21,9 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'user@laravel.com',
         //     'email_verified_at' => now(),
         // ]);
-        $this->call(
-            PrayerTimesSeeder::class
-        );
+        $this->call(UsersTableSeeder::class);
+        $this->call(RolesTableSeeder::class);
+        $this->call(PermissionsTableSeeder::class);
         $this->call(CacheTableSeeder::class);
         $this->call(CacheLocksTableSeeder::class);
         $this->call(FailedJobsTableSeeder::class);
@@ -34,13 +34,13 @@ class DatabaseSeeder extends Seeder
         $this->call(PasswordResetTokensTableSeeder::class);
         $this->call(PermissionRoleTableSeeder::class);
         $this->call(PermissionUserTableSeeder::class);
-        $this->call(PermissionsTableSeeder::class);
         $this->call(PersonalAccessTokensTableSeeder::class);
         $this->call(PostTableSeeder::class);
         $this->call(RoleUserTableSeeder::class);
-        $this->call(RolesTableSeeder::class);
         $this->call(SessionsTableSeeder::class);
         $this->call(UserActionsTableSeeder::class);
-        $this->call(UsersTableSeeder::class);
+        //        $this->call(
+//            PrayerTimesSeeder::class
+//        );
     }
 }
