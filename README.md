@@ -17,8 +17,9 @@ cd laravel-laratrust
 composer install
 cp .env.example .env
 php artisan key:generate
-php artisan migrate --database=prayer_times --seed 
-php artisan db:seed --database=prayer_times
+touch database/prayer_times.sqlite
+php artisan migrate 
+php artisan db:seed 
 
 ```
 <p dir="rtl" style="font-size:22px;font-weight:bold;">ابدأ خادم التطوير:</p>
