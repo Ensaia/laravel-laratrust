@@ -17,7 +17,8 @@ cd laravel-laratrust
 composer install
 cp .env.example .env
 php artisan key:generate
-php artisan migrate --seed
+php artisan migrate --database=prayer_times --seed 
+php artisan db:seed --database=prayer_times
 
 ```
 <p dir="rtl" style="font-size:22px;font-weight:bold;">ابدأ خادم التطوير:</p>
@@ -41,4 +42,7 @@ php artisan serve
 <p dir="ltr"><span style="font-size:16px;font-weight:bold;">Password</span> : password123</p>
 
 <p>صور الشاشة:</p>
-<p align="center"><img src="image.jpg" width="300"></p>
+<p align="center"><img src="screenshots/02.png" width="300"></p>
+<p align="center"><img src="screenshots/03.png" width="300"></p>
+<p align="center"><img src="screenshots/05.png" width="300"></p>
+<p align="center"><img src="screenshots/06.png" width="300"></p>

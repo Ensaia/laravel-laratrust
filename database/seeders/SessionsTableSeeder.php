@@ -57,12 +57,30 @@ class SessionsTableSeeder extends Seeder
             ),
             4 => 
             array (
-                'id' => 'qpjjaTVndUa9j8S1kWPDRpqMIlsVdMPBqYKvTPRn',
+                'id' => 'tvFKBDoiZGHC5BtGUwJtTKWZ0ucKm93XbRqRxcDs',
+                'user_id' => 1,
+                'ip_address' => '127.0.0.1',
+            'user_agent' => 'Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0',
+                'payload' => 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoielN3YVBIVjFlejJEcVhBUm02UWZmY1Jvckl6NU1QVmJQZ2FKQ1F1dSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzE6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9kYXNoYm9hcmQiO3M6NToicm91dGUiO3M6OToiZGFzaGJvYXJkIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czozOiJ1cmwiO2E6MDp7fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7fQ==',
+                'last_activity' => 1788785984,
+            ),
+            5 => 
+            array (
+                'id' => 'JlA0NLHfFNDUcCcZfmMt7lE59MWjAuhorHYl0Boy',
                 'user_id' => NULL,
                 'ip_address' => '127.0.0.1',
             'user_agent' => 'Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0',
-                'payload' => 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiZVhra014UzcxZG9OVHBId1pUR2M4dzFkMWNkQnFZNTNVUFo1R0JwTCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMCI7czo1OiJyb3V0ZSI7czo5OiJob21lSW5kZXgiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19',
-                'last_activity' => 1788785278,
+                'payload' => 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiY2R5OGNpR1NVekZVcFZlNGFZUFNVSmRvWkNudHJJbUFIQlJHQXFUQiI7czozOiJ1cmwiO2E6MTp7czo4OiJpbnRlbmRlZCI7czozMToiaHR0cDovL2xvY2FsaG9zdDo4MDAwL2Rhc2hib2FyZCI7fXM6OToiX3ByZXZpb3VzIjthOjI6e3M6MzoidXJsIjtzOjI3OiJodHRwOi8vbG9jYWxob3N0OjgwMDAvbG9naW4iO3M6NToicm91dGUiO3M6NToibG9naW4iO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19',
+                'last_activity' => 1788812176,
+            ),
+            6 => 
+            array (
+                'id' => 'kbxiExGuMUBGq7unQbYP3iZgcSVlG1DyndH3CitZ',
+                'user_id' => NULL,
+                'ip_address' => '127.0.0.1',
+            'user_agent' => 'Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0',
+                'payload' => 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiNFFDZ3VtMzdiT21lV0dLUldIMkxUdlJvYWdEa0J5MnJ5cVZnVjF2TCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMCI7czo1OiJyb3V0ZSI7czo5OiJob21lSW5kZXgiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19',
+                'last_activity' => 1788893332,
             ),
         ));
         

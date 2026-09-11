@@ -415,6 +415,18 @@ class LoginHistoryTableSeeder extends Seeder
                 'created_at' => '2026-09-06 12:17:05',
                 'updated_at' => '2026-09-06 12:17:05',
             ),
+            33 => 
+            array (
+                'id' => 100,
+                'user_id' => 1,
+                'name' => 'mohammed',
+                'email' => 'mohammed@laravel.com',
+                'ip_address' => '127.0.0.1',
+                'browser' => 'Firefox',
+                'platform' => 'Linux',
+                'created_at' => '2026-09-07 12:58:03',
+                'updated_at' => '2026-09-07 12:58:03',
+            ),
         ));
         
         

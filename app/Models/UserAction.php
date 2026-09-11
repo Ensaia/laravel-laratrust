@@ -11,7 +11,7 @@ class UserAction extends Model
      *
      * @var string
      */
-    protected $table = 'user_actions';
+    protected $table = 'user_action';
     /**
      * The primary key associated with the table.
      *

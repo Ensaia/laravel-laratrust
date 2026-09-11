@@ -6,19 +6,16 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+    protected $connection = 'prayer_times';
+
     /**
      * Run the migrations.
      */
     public function up(): void
     {
-        Schema::create('login_history', function (Blueprint $table) {
-            $table->id();
-            $table->integer('user_id');
-            $table->string('name');
-            $table->string('email');
-            $table->string('ip_address');
-            $table->string('browser');
-            $table->string('platform');
+        Schema::create('city', function (Blueprint $table) {
+            $table->id('city_id');
+            $table->string('city_name');
             $table->timestamps();
         });
     }
@@ -28,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('login_history');
+        Schema::dropIfExists('city');
     }
 };

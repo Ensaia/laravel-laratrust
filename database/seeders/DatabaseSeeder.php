@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,6 +21,9 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'user@laravel.com',
         //     'email_verified_at' => now(),
         // ]);
+        $this->call(
+            PrayerTimesSeeder::class
+        );
         $this->call(CacheTableSeeder::class);
         $this->call(CacheLocksTableSeeder::class);
         $this->call(FailedJobsTableSeeder::class);
@@ -38,8 +42,5 @@ class DatabaseSeeder extends Seeder
         $this->call(SessionsTableSeeder::class);
         $this->call(UserActionsTableSeeder::class);
         $this->call(UsersTableSeeder::class);
-        $this->call(CityTableSeeder::class);
-        $this->call(DefaultSettingTableSeeder::class);
-        $this->call(PrayerTimesTableSeeder::class);
     }
 }

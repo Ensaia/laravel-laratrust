@@ -70,14 +70,14 @@ class CacheTableSeeder extends Seeder
             8 => 
             array (
                 'key' => 'lara-trast-cache-e26d25b7baa8e1d9fec1a051b94bbd6d:timer',
-                'value' => 'i:1788727978;',
-                'expiration' => 1788727978,
+                'value' => 'i:1788785943;',
+                'expiration' => 1788785943,
             ),
             9 => 
             array (
                 'key' => 'lara-trast-cache-e26d25b7baa8e1d9fec1a051b94bbd6d',
-                'value' => 'i:2;',
-                'expiration' => 1788727978,
+                'value' => 'i:1;',
+                'expiration' => 1788785943,
             ),
         ));
         
