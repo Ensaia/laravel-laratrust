@@ -24,9 +24,9 @@ cd laravel-laratrust
 composer install
 cp .env.example .env
 php artisan key:generate
-touch database/prayer_times.sqlite 
-php artisan migrate 
-php artisan db:seed 
+touch database/prayer_times.sqlite
+php artisan migrate
+php artisan db:seed
 php artisan db:seed --class=PrayerTimesSeeder
 
 ```
