@@ -29,16 +29,40 @@
     </div>
     <div class="row mt-3">
         <div class="col-12 col-sm-6 col-md-3">
-            <x-ui.info-box icon="fa-solid fa-users" text="المستخدمون" :count=$users_count></x-ui.info-box>
+            <div class="info-box">
+                <span class="info-box-icon bg-dark elevation-1 text-white"><i class="fa-solid fa-users"></i></span>
+                <div class="info-box-content">
+                    <span class="info-box-text">{{ __('المستخدمون') }}</span>
+                    <span class="info-box-number">{{ $users_count }}</span>
+                </div>
+            </div>
         </div>
         <div class="col-12 col-sm-6 col-md-3">
-            <x-ui.info-box icon="fa-solid fa-user-gear" text="الأدوار" :count=$roles_count></x-ui.info-box>
+            <div class="info-box">
+                <span class="info-box-icon bg-dark elevation-1 text-white"><i class="fa-solid fa-user-gear"></i></span>
+                <div class="info-box-content">
+                    <span class="info-box-text">{{ __('الأدوار') }}</span>
+                    <span class="info-box-number">{{ $roles_count }}</span>
+                </div>
+            </div>
         </div>
         <div class="col-12 col-sm-6 col-md-3">
-            <x-ui.info-box icon="fa-solid fa-user-lock" text="الأذونات" :count=$permissions_count></x-ui.info-box>
+            <div class="info-box">
+                <span class="info-box-icon bg-dark elevation-1 text-white"><i class="fa-solid fa-user-lock"></i></span>
+                <div class="info-box-content">
+                    <span class="info-box-text">{{ __('الأذونات') }}</span>
+                    <span class="info-box-number">{{ $permissions_count }}</span>
+                </div>
+            </div>
         </div>
         <div class="col-12 col-sm-6 col-md-3">
-            <x-ui.info-box icon="fa-solid fa-book" text="المنشورات" :count=$posts_count></x-ui.info-box>
+            <div class="info-box">
+                <span class="info-box-icon bg-dark elevation-1 text-white"><i class="fa-solid fa-book"></i></span>
+                <div class="info-box-content">
+                    <span class="info-box-text">{{ __('المنشورات') }}</span>
+                    <span class="info-box-number">{{ $posts_count }}</span>
+                </div>
+            </div>
         </div>
     </div>
 
