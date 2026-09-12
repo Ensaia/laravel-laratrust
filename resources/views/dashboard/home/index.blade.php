@@ -50,7 +50,7 @@
             <div class="info-box">
                 <span class="info-box-icon bg-dark elevation-1 text-white"><i class="fa-solid fa-user-lock"></i></span>
                 <div class="info-box-content">
-                    <span class="info-box-text">{{ __('الأذونات') }}</span>
+                    <span class="info-box-text">{{ __('الصلاحيات') }}</span>
                     <span class="info-box-number">{{ $permissions_count }}</span>
                 </div>
             </div>
